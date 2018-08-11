@@ -1,0 +1,160 @@
+.my-body {
+  left: 0;
+  padding: 30px;
+}
+.site-demo-title {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 90px;
+  text-align: center;
+  z-index: 99999;
+  background-color: #fff;
+}
+.w-e-toolbar {
+  flex-wrap: wrap;
+}
+.blannerimg .float {
+  float: left;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+}
+.blannerimg .float .delete {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  line-height: 200px;
+  z-index: 10;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #777;
+  opacity: 0;
+  transition-duration: :0.7s;
+  -webkit-transition-duration: 0.7s;
+}
+.blannerimg .float .delete:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.blannerimg .float .result {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.blannerimg .float .result img {
+  position: relative;
+}
+form {
+  margin-bottom: 50px;
+}
+.layui-form-item .my-aux {
+  margin: 6px 10px 0 0;
+  text-indent: 10px;
+}
+.layui-input-blockin {
+  min-height: 40px;
+}
+.layui-inputr {
+  height: 100%;
+  line-height: 100%;
+}
+.layui-form-item > .layui-form-label {
+  font-size: 16px;
+}
+.layui-form-checked span,
+.layui-form-checked:hover span {
+  background-color: #000;
+}
+.content-look .layui-form {
+  padding: 10px 20px 0 0;
+}
+.content-look .layui-form input:disabled {
+  border: none;
+  background-color: #fff;
+  color: #333;
+}
+.content-look .layui-form input:hover {
+  border: none;
+  background-color: #fff;
+}
+.content-edit .layui-form {
+  padding: 10px 20px 0 0;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+#wrap ul {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  height: 80%;
+  width: auto;
+  position: absolute;
+  list-style: none;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  animation: myrotate 5s linear;
+  -webkit-animation: myrotate infinite 5s linear;
+  /*Safari and Chrome*/
+}
+#wrap ul li {
+  width: 40px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+#wrap ul li:nth-of-type(1) {
+  -webkit-transform: rotate(0);
+}
+#wrap ul li:nth-of-type(2) {
+  -webkit-transform: rotate(20deg);
+}
+#wrap ul li:nth-of-type(3) {
+  -webkit-transform: rotate(40deg);
+}
+#wrap ul li:nth-of-type(4) {
+  -webkit-transform: rotate(60deg);
+}
+#wrap ul li:nth-of-type(5) {
+  -webkit-transform: rotate(80deg);
+}
+#wrap ul li:nth-of-type(6) {
+  -webkit-transform: rotate(100deg);
+}
+#wrap ul li:nth-of-type(7) {
+  -webkit-transform: rotate(120deg);
+}
+#wrap ul li:nth-of-type(8) {
+  -webkit-transform: rotate(140deg);
+}
+#wrap ul li:nth-of-type(9) {
+  -webkit-transform: rotate(160deg);
+}
+@keyframes myrotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

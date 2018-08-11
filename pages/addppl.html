@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>开始使用layui</title>
+</head>
+<body class="layui-layout-body">
+	<div  class="layui-layout layui-layout-admin">
+	<div class="layui-header">
+	 <div class="layui-logo"><img src="../images/logo.png"/></div>
+		<ul class="layui-nav layui-layout-left"  lay-filter="demo">
+			
+		  <li class="layui-nav-item"><a href="">首页</a></li>
+		  <li class="layui-nav-item layui-this">
+		    <a href="javascript:;">创建投票</a>
+		    <!--<dl class="layui-nav-child">
+		      <dd><a href="">选项1</a></dd>
+		      <dd><a href="">选项2</a></dd>
+		      <dd><a href="">选项3</a></dd>
+		    </dl>-->
+		  </li>
+		  <li class="layui-nav-item"><a href="javascript:;">管理投票</a></li>
+		  <li class="layui-nav-item">
+		    <a href="javascript:;">帮助中心</a>
+		  </li>
+		  <li class="layui-nav-item"><a href="javascript:;">关于我们</a></li>
+		</ul>
+		<ul class="layui-nav layui-layout-right" style="padding-top: 20px;">
+      <li class="layui-nav-item islog">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">贤心
+        </a>
+      </li>
+      <li class="layui-nav-item islog"><a href="">退了</a></li>
+      <li class="layui-nav-item nolog"><a href=""><button class="layui-btn layui-btn-sm">登录</button></a></li>
+    </ul>
+</div>  
+</div> 
+  <div class="layui-body my-body">
+  	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+		  <div class="layui-tab-content">
+		    <div class="layui-tab-item layui-show">
+		    	    <!-- 内容主体区域 1-->
+			   		<form class="layui-form" action="">
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">姓名昵称</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="username" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" id="username" class="layui-input">
+					    </div>
+					  </div>
+					  <!--封面设置-->
+					  <div class="layui-form-item" style="min-height: 288px;">
+					    <label class="layui-form-label">照片美照</label>
+					    <div class="layui-input-block">
+					      <input type="radio" name="votePage" lay-filter="votePage" value="0" title="图片封面" checked>
+					      <input type="radio" name="votePage" lay-filter="votePage" value="1" title="视频封面">
+					    </div>
+					    <div class="layui-input-block votePage">
+					      	<div class="container">
+					      		 <button class="layui-btn layui-btn-sm layui-btn-radius" type="button" id="select" lay-filter="selectpic">选择图片</button>
+					      		 <button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal layui-hide" type="button" id="add" >追加图片</button>
+		                <input style="display: none;" type="file" id="file_input" multiple/> <!--用input标签并选择type=file，记得带上multiple，不然就只能单选图片了-->    
+                    <div class="blannerimg" style="width: 100%;">
+                    	
+                    </div>
+      						</div> 
+					    </div>
+					    <div class="layui-input-block votePage" style="display: none;">
+					    	<input type="text" name="video"  id="video"  placeholder="请输入视频链接" autocomplete="off" class="layui-input"style="margin-top: 30px;">
+
+					    </div>
+					  </div>
+					  <!--封面设置end-->
+					  <!--美丽格言-->
+					  <div class="layui-form-item layui-form-text">
+					    <label class="layui-form-label">美丽格言</label>
+					    <div class="layui-input-block">
+					      <textarea name="art" placeholder="请输入美丽格言" class="layui-textarea" required  lay-verify="required"></textarea>
+					    </div>
+					  </div>
+					  <!--美丽格言end-->
+					  <!--个人介绍-->
+					  <div class="layui-form-item layui-form-text">
+					    <label class="layui-form-label">个人介绍</label>
+					    <div class="layui-input-block">
+					      <textarea name="slef"  placeholder="请输入个人介绍" class="layui-textarea" required  lay-verify="required"></textarea>
+					    </div>
+					  </div>
+					  <!--个人介绍end-->
+					  <!--联系电话-->
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">联系电话</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="phone" required  lay-verify="required" placeholder="请输入联系电话" autocomplete="off" id="activityTitle" class="layui-input">
+					    </div>
+					  </div>
+					  <!--联系电话end-->
+					  <!--收获地址-->
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">收获地址</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="address" required  lay-verify="required" placeholder="请输入收获地址" autocomplete="off" id="activityTitle" class="layui-input">
+					    </div>
+					  </div>
+					  <!--收获地址end-->
+
+					  <div class="layui-form-item">
+					    <div class="layui-input-block" style="text-align: center;">
+					      <button class="layui-btn"  lay-submit=""  id="submit" lay-filter="formDemo1">立即提交</button>
+
+					    </div>
+					  </div>
+					</form>
+	
+  
+		    </div>
+
+		     		
+		  </div>
+		</div> 
+	</div>
+ 
+
+<input type="hidden" value="0" id="photoVideo">
+
+</body>
+<script src="../layui/layui.js"></script>
+<script src="../js/wangEditor.js"></script>
+<script>
+//一般直接写在一个js文件中
+layui.use(['layer', 'form','element','laydate'], function(){
+  var $ = layui.$
+  ,layer = layui.layer
+  ,form = layui.form
+  ,element = layui.element
+  ,laydate = layui.laydate;
+  
+
+    //点击第一个提交end
+   //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+  laydate.render({
+  elem: '#startDate' //指定元素
+  ,type: 'datetime'
+	});
+  laydate.render({
+  elem: '#endDate' //指定元素
+  ,type: 'datetime'
+	});
+	/*上传代码*/
+				form.on('submit(formDemo1)', function (data) {
+           // console.log(data.elem);
+           var par = {};
+			     var submitArr = [];  
+		       if($("#photoVideo").val()=="0") { 
+		       		if(!dataArr.length){
+		            layer.msg("请选择图片封面")   
+		            return false;
+		     		   } 
+			        for (var i = 0; i < dataArr.length; i++) {  
+			            if (dataArr[i]) {  
+			                submitArr.push(dataArr[i]);  
+			            }  
+			        }  
+		        	par.mulImg = JSON.stringify(submitArr)
+		        }else {
+		        	 	 if($("#video").val()==""){    
+			            layer.msg("请输入视频地址")  
+			            return false;
+		     		   }
+		        	 	 par.video = $("#video").val()
+		        }
+		 			 	/*		 layer.alert(JSON.stringify(data.field), {
+				      title: '最终的提交信息'
+				    })*/
+  			     var field = data.field
+  			 //    console.log(field)
+  			     par.name = field.username;
+  			     par.art = field.art;
+  			     par.slef = field.slef;
+  			     par.phone = field.phone;
+  			     par.address = field.address;
+  			     		$.ajax({
+			                url: "http://192.168.100.249:8080/votingSystem/creatActivity.do",
+			                type : 'post',
+						  				data : par,
+						  				success : function(data) {
+						  					layui.msg("ok")
+						             
+						  				},
+						          error:function (data) {
+											}
+			  			});
+            return false;
+       });
+	
+
+	/*上传代码end*/
+	/*图片上传*/
+			form.on('radio(votePage)', function (data) {
+           // alert(data.elem);
+           // console.log(data.elem);
+         //   alert(data.value);//判断单选框的选中值
+            if (data.value=="1") {
+            	$(".votePage").hide().eq(1).show();
+            	$("#photoVideo").val(1)
+            }else {
+            	$(".votePage").hide().eq(0).show();
+            	$("#photoVideo").val(0)
+            }
+            //console.log(data.value);
+            //alert(data.othis);
+            //layer.tips('开关checked：' + (this.checked ? 'true' : 'false'), data.othis);
+            //layer.alert('响应点击事件');
+       });
+
+	 var input = document.getElementById("file_input");    
+    var result;    
+    dataArr = []; // 储存所选图片的结果(文件名和base64数据)  
+    var fd;  //FormData方式发送请求    
+    var oSelect = document.getElementById("select");  
+    var oAdd = document.getElementById("add");  
+    var oSubmit = document.getElementById("submit");  
+    var oInput = document.getElementById("file_input");  
+     
+    if(typeof FileReader==='undefined'){    
+        alert("抱歉，你的浏览器不支持 FileReader");    
+        input.setAttribute('disabled','disabled');    
+    }else{    
+        input.addEventListener('change',readFile,false);    
+    }//handler    
+    
+        
+    function readFile(){  
+    	
+    	if(dataArr.length>2){
+    		alert("最多上传3张图片");
+    	}else{
+    		fd = new FormData();    
+            var iLen = this.files.length;  
+            //var index = 0;  
+            for(var i=0;i<iLen;i++){  
+                if (!input['value'].match(/.jpg|.gif|.png|.jpeg|.bmp/i)){//判断上传文件格式    
+                    return alert("上传的图片格式不正确，请重新选择");    
+                }  
+                var reader = new FileReader();  
+                reader.index = i;    
+                fd.append(i,this.files[i]);  
+                reader.readAsDataURL(this.files[i]);  //转成base64    
+                reader.fileName = this.files[i].name;  
+      
+      
+                reader.onload = function(e){   
+                    var imgMsg = {    
+                        name : this.fileName,//获取文件名    
+                        base64 : this.result   //reader.readAsDataURL方法执行完后，base64数据储存在reader.result里    
+                    }   
+                    if(dataArr.length>2){
+                    	alert("最多上传3张图片");
+                    }else{
+                    	dataArr.push(imgMsg);    
+                        result = '<div class="delete">delete</div><div class="result"><img src="'+this.result+'" alt=""/></div>';    
+                        var div = document.createElement('div');  
+                        div.innerHTML = result;    
+                        div['className'] = 'float';  
+                        div['index'] = index;    
+                        document.getElementsByClassName('blannerimg')[0].appendChild(div);  //插入dom树    
+                        var img = div.getElementsByTagName('img')[0];  
+                        img.onload = function(){    
+                            var nowHeight = ReSizePic(this); //设置图片大小    
+                            this.parentNode.style.display = 'block';    
+                            var oParent = this.parentNode;    
+                            if(nowHeight){    
+                                oParent.style.paddingTop = (oParent.offsetHeight - nowHeight)/2 + 'px';    
+                            }    
+                        }   
+                        
+                        div.onclick =function(){
+                        	this.remove();                  //在页面中删除该图片元素
+                        	//delete dataArr[this.index];     //删除dataArr对应的数据
+                        	dataArr.splice(this.index,1);   //删除dataArr对应的数据
+                        	//alert(dataArr.length);          
+                        }
+                        index++;
+                    }
+                    if ($(".blannerimg").find(".float").length>"0") {
+                    	 $("#add").removeClass("layui-hide")
+                    	 $("#select").text("重新选择")
+                    }
+                    
+                  
+                    
+                }    
+            } 
+    	}
+    	
+           
+    }    
+        
+        
+    function send(){ 
+
+    }    
+        
+     
+  
+  
+    oSelect.onclick=function(){   
+        oInput.value = "";   // 先将oInput值清空，否则选择图片与上次相同时change事件不会触发  
+        //清空已选图片  
+        $('.float').remove();  
+        dataArr = [];   
+        index = 0;          
+        oInput.click();   
+    }   
+  
+  
+    oAdd.onclick=function(){  
+        oInput.value = "";   // 先将oInput值清空，否则选择图片与上次相同时change事件不会触发  
+        oInput.click();   
+    }   
+  
+  
+    oSubmit.onclick=function(){    
+
+          
+        send(); 
+    }
+    
+    
+    
+    
+   
+  
+function ReSizePic(ThisPic) {    
+    var RePicWidth = 200; //这里修改为您想显示的宽度值    
+    
+    var TrueWidth = ThisPic.width; //图片实际宽度    
+    var TrueHeight = ThisPic.height; //图片实际高度    
+        
+    if(TrueWidth>TrueHeight){    
+        //宽大于高    
+        var reWidth = RePicWidth;    
+        ThisPic.width = reWidth;    
+        //垂直居中    
+        var nowHeight = TrueHeight * (reWidth/TrueWidth);    
+        return nowHeight;  //将图片修改后的高度返回，供垂直居中用    
+    }else{    
+        //宽小于高    
+        var reHeight = RePicWidth;    
+        ThisPic.height = reHeight;    
+    }
+    }
+
+	/*图片上传end*/
+	
+	
+});
+</script> 
+</html>

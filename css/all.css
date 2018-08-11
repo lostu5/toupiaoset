@@ -1,0 +1,42 @@
+.my-body {
+  top: 100px;
+}
+.layui-layout-admin .layui-logo {
+  left: 50px;
+}
+.layui-layout-admin .layui-layout-left {
+  left: 240px;
+}
+.layui-layout-admin .layui-header {
+  background-color: #fff;
+}
+.layui-nav .layui-nav-item a:hover,
+.layui-nav .layui-this a {
+  color: #000;
+}
+.layui-nav .layui-nav-item a {
+  color: #000;
+}
+.layui-header {
+  padding: 20px 0;
+}
+.layui-layout-left {
+  top: 20px;
+}
+.layui-layout-admin .layui-logo {
+  padding-top: 20px;
+}
+.layui-nav .layui-nav-more {
+  border-color: #000 transparent transparent;
+}
+.layui-nav .layui-nav-mored {
+  border-color: transparent transparent #000 ;
+}
+.layui-layout-admin .layui-logo {
+  height: auto;
+}
+@media screen and (max-width: 1000px) {
+  .layui-nav .less1000 {
+    display: none;
+  }
+}
